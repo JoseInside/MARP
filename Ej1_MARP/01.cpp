@@ -3,7 +3,8 @@
 
 #include <algorithm>
 #include <iostream>
-#include <fstream>
+#include <fstream>
+
 #include "bintree_eda.h"
 
 // lee un árbol binario de la entrada estándar

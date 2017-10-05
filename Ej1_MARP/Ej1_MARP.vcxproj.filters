@@ -18,9 +18,15 @@
     <ClInclude Include="bintree_eda.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TreeMap_AVL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

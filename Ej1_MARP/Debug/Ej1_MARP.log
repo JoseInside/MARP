@@ -1,13 +1,15 @@
-﻿Build started 28/09/2017 10:47:34.
-     1>Project "C:\hlocal\Ej1_MARP\Ej1_MARP\Ej1_MARP.vcxproj" on node 2 (Build target(s)).
+﻿Build started 05/10/2017 10:02:42.
+     1>Project "C:\hlocal\MARP\Ej1_MARP\Ej1_MARP.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\software\programacion\MSVStudio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt 01.cpp
-         01.cpp
+         C:\software\programacion\MSVStudio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ej2.cpp
+         Ej2.cpp
+     1>c:\hlocal\marp\ej1_marp\ej2.cpp(38): warning C4172: returning address of local variable or temporary
+     1>c:\hlocal\marp\ej1_marp\ej2.cpp(40): warning C4172: returning address of local variable or temporary
        Link:
-         C:\software\programacion\MSVStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\hlocal\Ej1_MARP\Debug\Ej1_MARP.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\hlocal\Ej1_MARP\Debug\Ej1_MARP.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\hlocal\Ej1_MARP\Debug\Ej1_MARP.lib" /MACHINE:X86 Debug\01.obj
-         Ej1_MARP.vcxproj -> C:\hlocal\Ej1_MARP\Debug\Ej1_MARP.exe
-     1>Done Building Project "C:\hlocal\Ej1_MARP\Ej1_MARP\Ej1_MARP.vcxproj" (Build target(s)).
+         C:\software\programacion\MSVStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\hlocal\MARP\Debug\Ej1_MARP.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\hlocal\MARP\Debug\Ej1_MARP.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\hlocal\MARP\Debug\Ej1_MARP.lib" /MACHINE:X86 Debug\Ej2.obj
+         Ej1_MARP.vcxproj -> C:\hlocal\MARP\Debug\Ej1_MARP.exe
+     1>Done Building Project "C:\hlocal\MARP\Ej1_MARP\Ej1_MARP.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.67
+Time Elapsed 00:00:00.86
