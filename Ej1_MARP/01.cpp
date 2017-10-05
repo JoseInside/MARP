@@ -31,9 +31,9 @@ int altura(bintree<char> const& arbol) {
 		return 1 + std::max(altura(arbol.left()), altura(arbol.right()));
 }
 
-// propios o los de las estructuras de datos de clase
-// función que resuelve el problema
-// comentario sobre el coste, O(f(N)), donde N es ...
+
+//COSTE CONSTANTE
+//Comprueba si el árbol binario está equilibrado
 bool resolver(bintree<char> const& arbol) {
 
 	int alt_min, alt_max;
@@ -48,29 +48,10 @@ bool resolver(bintree<char> const& arbol) {
 
 		if (alt_max - alt_min > 1)
 			return false;
-		else return true;
+		else 
+			return resolver(arbol.left()) && resolver(arbol.right());
 	}
-		
-		
-		/*
-		max = std::max(altura(arbol.left()), altura(arbol.right()));
-		min = std::min(altura(arbol.left()), altura(arbol.right()));
-
-		if (max == min)
-			//siguiente hijo
-			arbol = arbol.left;
-		else if (altura(arbol.left()) > altura(arbol.right()))
-			arbol = arbol.left;
-		else arbol = arbol.right;
-	}
-	
-	else if (std::max(altura(arbol.left()), altura(arbol.right())) -
-		std::min(altura(arbol.left()), altura(arbol.right())) > 1)
-		return false;
-	else return true;*/
-
 }
-
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta

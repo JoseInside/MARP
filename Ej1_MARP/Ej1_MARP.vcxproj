@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D0A0EDDB-2B95-4E8F-A657-E6B82D3804C2}</ProjectGuid>
     <RootNamespace>Ej1_MARP</RootNamespace>
+    <ProjectName>MARP_Exercises</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,12 +65,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01.cpp" />
-    <ClCompile Include="02.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="bintree_eda.h" />
     <ClInclude Include="TreeMap_AVL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="01.cpp" />
+    <ClCompile Include="02.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

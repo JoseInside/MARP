@@ -12,7 +12,6 @@ template <typename T>
 bintree<T> leerArbol(T vacio) {
 
 	T raiz;
-	auto altura;
 	std::cin >> raiz;
 	if (raiz == vacio) { // es un árbol vacío
 		return{};
@@ -20,11 +19,11 @@ bintree<T> leerArbol(T vacio) {
 	else { // leer recursivamente los hijos
 		auto iz = leerArbol(vacio);
 		auto dr = leerArbol(vacio);
-		return{ iz, raiz, dr, altura };
+		return{ iz, raiz, dr };
 	}
 }
 
-int altura(bintree<int> const& arbol) {
+int altura(bintree<char> const& arbol) {
 
 	if (arbol.empty())
 		return 0;
@@ -32,21 +31,9 @@ int altura(bintree<int> const& arbol) {
 		return 1 + std::max(altura(arbol.left()), altura(arbol.right()));
 }
 
-bintree<int> const& recorrido(bintree<int> const& arbol){
 
-	if (arbol.empty())
-		return altura(arbol);
-	else {
-		//altura(arbol);
-		return std::max(arbol.left(), arbol.right());
-	}
-
-}
-
-// propios o los de las estructuras de datos de clase
-// función que resuelve el problema
-// comentario sobre el coste, O(f(N)), donde N es ...
-bool resolver(bintree<int> const& arbol) {
+//Comprueba si el árbol binario está equilibrado
+bool equilibrado(bintree<char> const& arbol) {
 
 	int alt_min, alt_max;
 
@@ -56,23 +43,35 @@ bool resolver(bintree<int> const& arbol) {
 	else {
 
 		alt_max = 1 + std::max(altura(arbol.left()), altura(arbol.right()));
-
 		alt_min = 1 + std::min(altura(arbol.left()), altura(arbol.right()));
 
-		if (alt_max - alt_min <= 1 && comparaHijos(arbol))
-			return true;
-		else return false;
+		if (alt_max - alt_min > 1)
+			return false;
+		else
+			return equilibrado(arbol.left()) && equilibrado(arbol.right());
 	}
+}
+
+
+//Comprueba si el árbol binario cumple la condición de un árbol AVL
+//de tener todos los hijos izquierdos del nodo menores que éste y mayores que
+//los hijos derechos.
+bool cumpleCondis(bintree<char> const& arbol){
 
 }
 
+//Comprueba si el árbol cumple las dos condiciones para ser AVL
+bool cumpleAVL(bintree<char> const& arbol){
+
+	return (equilibrado(arbol) && cumpleCondis(arbol));
+}
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
 
-	auto arbol = leerArbol('-1');
-	bool sol = resolver(arbol);
+	auto arbol = leerArbol('.');
+	bool sol = cumpleAVL(arbol);
 
 	if (sol)
 		std::cout << "SI" << "\n";
